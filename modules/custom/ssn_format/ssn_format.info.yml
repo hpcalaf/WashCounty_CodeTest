@@ -1,0 +1,4 @@
+name: SSN Reformat Module
+type: module
+description: dynamically create nodes of content type "Characters"
+core_version_requirement: ^8 || ^9

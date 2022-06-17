@@ -1,0 +1,60 @@
+<?php
+/* use Drupal\Core\Language\Language;
+
+function breakbad_characters_submit()
+{
+  $url = "https://breakingbadapi.com/api/characters";
+
+  $apiresponse = drupal_http_request($url);
+  $characters = json_decode($apiresponse->data);
+
+  foreach ($characters as $character) {
+    breakbad_characters_create($character);
+  }
+}
+
+function breakbad_characters_create($character) {
+  global $user;
+
+  $node = new stdClass();
+  $node->title = $character["name"];
+  $node->type = "breakbad_character";
+
+  node_object_prepare($node);
+
+  $node->language = Language::LANGCODE_NOT_SPECIFIED;
+  $node->uid = $user->uid;
+
+  $node->status = 1;
+  $node->promote = 0;
+  $node->comment = 1;
+
+  $node->field_char_id[$node->language][]['value'] = $character["char_id"];
+  $node->field_name[$node->language][]['value'] = $character["char_id"];
+  $node->field_birthday[$node->language][]['value'] = $character["birthday"];
+  $node->field_occupation[$node->language][]['value'] = $character["occupation"];
+  $node->field_status[$node->language][]['value'] = $character["status"];
+  $node->field_nickname[$node->language][]['value'] = $character["nickname"];
+  $node->field_portrayed[$node->language][]['value'] = $character["portrayed"];
+  $node->field_category[$node->language][]['value'] = $character["category"];
+  $node->field_better_call_saul_appearance[$node->language][]['value'] = $character["better_call_saul_appearance"];
+
+  // Add image to node.
+  $data = file_get_contents($character["img"]);
+  $file = file_save_data($data, 'public://');
+  $node->field_img = [
+      'target_id' => $file->id(),
+      'alt'       => $character["name"],
+      'title'     => $character["name"],
+    ];
+
+  foreach($character["appearance"] as $show){
+    $node->field_appearance->appendItem($show);
+  }
+
+  $node = node_submit($node); // Prepare node for saving
+  node_save($node);
+
+} */
+
+

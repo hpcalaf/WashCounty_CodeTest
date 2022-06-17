@@ -1,0 +1,7 @@
+ssn_list.page:
+  path: '/ssn_list'
+  defaults:
+    _form: '\Drupal\ssn_format\Form\SSNList_Gather'
+    _title: 'Listing of SSNs'
+  requirements:
+    _permission: 'access content'
